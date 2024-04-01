@@ -14,6 +14,12 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="./assets/css/spapp.css">
+
+        <script src="./assets/js/jquery.min.js"></script>
+        <script src="./assets/js/jquery.spapp.min.js"></script>
+        <script src="./assets/js/script.js"></script>
     </head>
     <body>
         <!-- Navigation-->
@@ -23,19 +29,15 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="advanced_search.html">Advanced Search</a></li>
-                        <li class="nav-item"><a class="nav-link" href="sell_vehicle.html">Sell Your Vehicle</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#advanced_search">Advanced Search</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sell_vehicle">Sell Your Vehicle</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#login">Login</a></li>
                     </ul>
-                    <form class="d-flex" action="login.html">
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="fa fa-user-circle"></i>
-                            Login
-                        </button>
-                    </form>
                 </div>
             </div>
         </nav>
+        
         <!-- Header-->
         <header class="bg-dark py-1">
             <div class="container px-4 px-lg-5 my-5">
@@ -47,12 +49,24 @@
                 </div>
             </div>
         </header>
+        <section id="pageContent">
+            <main id="spapp" role="main">
+                <section id="advanced_search" data-load="advanced_search.html">
+                </section>
+                <section id="sell_vehicle" data-load="sell_vehicle.html">
+                </section>
+                <section id="login" data-load="login.html">
+                </section>
+                <section id="vehicle_details" data-load="vehicle_details.html">
+                </section>
+            </main>
+        </section>
         <!-- Section-->
         <section class="py-5">
             <h1 align="center">Featured listings</h1>
             <div class="container px-4 px-lg-5 mt-5">      
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    <div class="col mb-5" onclick="window.location='vehicle_details.html'">
+                    <div class="col mb-5" onclick="window.location='#vehicle_details'">
                         <div class="card h-100">
                             <!-- Product image-->
                             <img class="card-img-top" src="assets/vehicles/vw_tiguan.jpg" alt="..." height="150"/>
@@ -76,7 +90,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col mb-5" onclick="window.location='vehicle_details.html'">
+                    <div class="col mb-5" onclick="window.location='#vehicle_details'">
                         <div class="card h-100">
                             <!-- Product image-->
                             <img class="card-img-top" src="assets/vehicles/audi_q5.jpg" alt="..." height="150" />
@@ -100,7 +114,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col mb-5" onclick="window.location='vehicle_details.html'">
+                    <div class="col mb-5" onclick="window.location='#vehicle_details'">
                         <div class="card h-100">
                             <!-- Product image-->
                             <img class="card-img-top" src="assets/vehicles/audi_q8.webp" alt="..." height="150"/>
@@ -124,7 +138,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col mb-5" onclick="window.location='vehicle_details.html'">  
+                    <div class="col mb-5" onclick="window.location='#vehicle_details'">
                         <div class="card h-100">
                             <!-- Product image-->
                             <img class="card-img-top" src="assets/vehicles/aud_tt.jpg" alt="..." height="150"/>
@@ -159,5 +173,15 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+            var app = $.spapp({
+                defaultView: "#advanced_search",
+                templateDir: "./views/"
+    
+            });
+    
+    
+            app.run();
+        </script>
     </body>
 </html>
