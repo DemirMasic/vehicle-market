@@ -3,17 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advanced Search</title>
+  <title>Sell Your Vehicle</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="index.html">Vehicle Market</a>
-  </nav>
-
   <div class="container mt-4">
     <form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="title">Title</label>
+          <input type="text" class="form-control" id="title" placeholder="Enter title">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="price">Price</label>
+          <input type="text" class="form-control" id="price" placeholder="Enter price">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="image">Image URL</label>
+        <input type="text" class="form-control" id="image" placeholder="Enter image URL">
+      </div>
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="brand">Brand</label>
@@ -35,27 +45,22 @@
           </select>
         </div>
         <div class="form-group col-md-6">
-          <label for="year">Year of Production</label>
-          <input type="text" class="form-control" id="year" placeholder="Enter year">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="minPrice">Minimum Price</label>
-          <input type="text" class="form-control" id="minPrice" placeholder="Enter minimum price">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="maxPrice">Maximum Price</label>
-          <input type="text" class="form-control" id="maxPrice" placeholder="Enter maximum price">
+          <label for="mileage">Mileage</label>
+          <input type="text" class="form-control" id="mileage" placeholder="Enter mileage">
         </div>
       </div>
       <div class="form-group">
-        <label for="mileage">Maximum Mileage</label>
-        <input type="text" class="form-control" id="mileage" placeholder="Enter maximum mileage">
+        <label for="year">Year of Production</label>
+        <input type="text" class="form-control" id="year" placeholder="Enter year">
       </div>
-      <button type="submit" class="btn btn-primary">Search</button>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" rows="5" placeholder="Enter description"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
+
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

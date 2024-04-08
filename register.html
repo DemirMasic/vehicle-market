@@ -11,6 +11,9 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/spinkit.css" rel="stylesheet" />
+    <link href="assets/css/dataTables.bootstrap5.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -22,16 +25,16 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6 registration-container">
-                <form class="registration-form">
+                <form class="registration-form" id="register_form">
                     <h2>Register</h2>
                     <div class="form-group">
-                        <input type="email" class="form-control" id="email" placeholder="Email" required>
+                        <input type="email" class="form-control" id="email" placeholder="Email" name="email">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="username" placeholder="Username" required>
+                        <input type="text" class="form-control" id="username" placeholder="Username" name="username">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        <input type="password" class="form-control" id="password" placeholder="Password" name="password">
                     </div>
                     <button type="submit" class="btn btn-primary btn-block register-btn">Register</button>
                 </form>
@@ -42,5 +45,12 @@
         </div>
     </div>
 </body>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/block-ui.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
+<script src="assets/js/dataTables.bootstrap5.js"></script>
+<script src="assets/js/dataTables.js"></script>
 
+<script src="js/forms.js"></script>
 </html>
